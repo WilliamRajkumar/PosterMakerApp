@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta name="viewport"  content="width=device-width,initial-scale=1.0">
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/logoin.css' %}">
+</head>
+<body>
+<section>
+    <div class="imgbx"> 
+        <img src="{% static 'images/dar1.jpg' %}"></div>
+        <div class="contentbx">
+            <div class="formbx">
+                 <h2>Login</h2> {{ msg }}
+                <form method="post">
+                    <div class="f">
+                    {% csrf_token %}
+                    {{ form.as_p }}<br>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                   Don't Have an account Crate Now <a href="/signup">Signup</a>
+                    </div>
+                  </form>
+                
+</section>
+</body>
+</html>
+  
+
+
+  
